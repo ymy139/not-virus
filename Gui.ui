@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>215</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>215</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>通用UEFI-CEF注入器</string>
+  </property>
+  <widget class="QLabel" name="Title">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>380</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(218, 114, 24);</string>
+   </property>
+   <property name="text">
+    <string>该程序正处于Dev开发版中，可能出现错误，注入前请备份系统及文件！</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BuleScreen">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>35</y>
+     <width>100</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>蓝屏注入</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="UEFI">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>35</y>
+     <width>100</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>UEFI启动注入</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="BlueScreenCode">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>36</y>
+     <width>90</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="BlueScreenCodeTip">
+   <property name="geometry">
+    <rect>
+     <x>225</x>
+     <y>39</y>
+     <width>60</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>蓝屏代码：</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="BIOSModeTip">
+   <property name="geometry">
+    <rect>
+     <x>225</x>
+     <y>60</y>
+     <width>60</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>BIOS类型：</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="BIOSMode">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>58</y>
+     <width>90</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="Log">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>80</y>
+     <width>370</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>日志记录器</string>
+   </property>
+   <widget class="QTextBrowser" name="LogDisplay">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>15</y>
+      <width>360</width>
+      <height>100</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="Tip">
+   <property name="geometry">
+    <rect>
+     <x>1</x>
+     <y>201</y>
+     <width>265</width>
+     <height>11</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>BIOS模式(自动检测)：UEFI BIOS  安全模式：否</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
