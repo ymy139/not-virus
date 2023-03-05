@@ -25,6 +25,7 @@ class Gui_Main(QWidget):
         
         self.BuleScreen_btn = QPushButton(self)
         self.BuleScreen_btn.setGeometry(QRect(15, 35, 100, 45))
+        self.BuleScreen_btn.clicked.connect(Functions.BlueScreen)
         
         self.UEFI_btn = QPushButton(self)
         self.UEFI_btn.setGeometry(QRect(120, 35, 100, 45))
@@ -92,11 +93,11 @@ class Gui_Setup(QWidget):
         if Functions.IsAdmin():
             pass
         else:
-            if Functions.GetAdmin():
-                pass
-            else:
+            if not Functions.GetAdmin():
                 QMessageBox.critical(self, "启动失败!", "提权失败，请以管理员身份运行!", QMessageBox.Ok)
-                exit(1)
+                exit()
+            else:
+                exit()
             
         self.show()
         QApplication.processEvents()
