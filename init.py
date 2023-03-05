@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QWidget, QLabel, QPushButton, QLineEdit, QComboBox, QGroupBox, QTextBrowser, QApplication
+from PyQt5.QtWidgets import QWidget, QLabel, QPushButton, QComboBox, QGroupBox, QTextBrowser, QApplication
 from PyQt5.QtCore import QSize, QRect, QCoreApplication, Qt
 from PyQt5.QtGui import QFont
 from sys import exit, argv
@@ -23,10 +23,10 @@ class Gui_Main(QWidget):
         self.BuleScreen.setGeometry(QRect(15, 35, 100, 45))
         self.UEFI = QPushButton(self)
         self.UEFI.setGeometry(QRect(120, 35, 100, 45))
-        self.BlueScreenCode = QLineEdit(self)
+        self.BlueScreenCode = QComboBox(self)
         self.BlueScreenCode.setGeometry(QRect(290, 36, 90, 20))
         self.BlueScreenCode.setEnabled(False)
-        self.BlueScreenCode.setText("暂不支持")
+        self.BlueScreenCode.addItems(["暂不支持"])
         self.BlueScreenCodeTip = QLabel(self)
         self.BlueScreenCodeTip.setGeometry(QRect(225, 39, 60, 15))
         self.BIOSModeTip = QLabel(self)
@@ -52,6 +52,9 @@ class Gui_Main(QWidget):
         
     def down(self):
         self.LogDisplay.append(Functions.GetLogTimeDisplay()+"加载完毕！")
+        
+    def BlueScreen(self):
+        pass
 
 class Gui_Setup(QWidget):
     def __init__(self) -> None:
@@ -90,7 +93,7 @@ class Gui_Setup(QWidget):
         
 class Functions():
     def GetLogTimeDisplay() -> str:
-        return str("["+str(datetime.now())+"] ")
+        return "["+str(datetime.now())+"] "
 
 app1 = QApplication(argv)
 app2 = QApplication(argv)
