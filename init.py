@@ -137,6 +137,9 @@ class Functions():
             return True
         except:
             return False
+        
+    def UEFIin():
+        system("res/uefi-info.exe")
 
 app1 = QApplication(argv)
 app2 = QApplication(argv)
