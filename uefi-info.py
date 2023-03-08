@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QWidget, QLabel, QApplication
-from PyQt5.QtCore import QSize, QRect, QCoreApplication, Qt, QPoint
+from PyQt5.QtCore import QSize, QRect, Qt, QPoint
 from PyQt5.QtGui import QFont
 from sys import argv, exit
 
